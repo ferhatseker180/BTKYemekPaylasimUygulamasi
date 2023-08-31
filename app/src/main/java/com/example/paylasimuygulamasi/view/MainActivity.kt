@@ -31,21 +31,21 @@ class MainActivity : AppCompatActivity() {
 
         val gmail = editTextGmail.text.toString()
         val password = editTextPassword.text.toString()
-        auth.signInWithEmailAndPassword(gmail,password
-        ).addOnCompleteListener { task ->
-            if (task.isSuccessful) {
+      //  auth.signInWithEmailAndPassword(gmail,password
+      //  ).addOnCompleteListener { task ->
+       //     if (task.isSuccessful) {
 
-                val guncelKullanici = auth.currentUser?.email.toString()
-                Snackbar.make(view,"Hoşgeldiniz : ${guncelKullanici}",Snackbar.LENGTH_SHORT).show()
+       //         val guncelKullanici = auth.currentUser?.email.toString()
+       //         Snackbar.make(view,"Hoşgeldiniz : ${guncelKullanici}",Snackbar.LENGTH_SHORT).show()
                 val intent = Intent(this, AkisActivity::class.java)
                 startActivity(intent)
                 finish()
             }
-        }.addOnFailureListener {exception ->
-            Toast.makeText(this,exception.localizedMessage,Toast.LENGTH_LONG).show()
-        }
+   //     }.addOnFailureListener {exception ->
+    //        Toast.makeText(this,exception.localizedMessage,Toast.LENGTH_LONG).show()
+    //    }
 
-    }
+  //  }
     fun kayitOl(view: View) {
 
         val gmail = editTextGmail.text.toString()
